@@ -4,6 +4,8 @@ import axios from "axios";
 
 import styles from "./CustomerRegister.module.css";
 import companyLogo from "../../assets/companyLogo.svg";
+import Navbar from "../../components/Navbar";
+import BackgroundOverlay from '../../assets/backgroundOverlay.png';
 
 const CustomerRegister = () => {
 	const [formData, setFormData] = useState({
@@ -38,12 +40,14 @@ const CustomerRegister = () => {
 
 	return (
 		<>
+			<Navbar />
+			<img src={BackgroundOverlay} alt="Background Overlay" className={styles.backgroundOverlay} />
 			<div className={styles.container}>
 				<div className={styles.logoContainer}>
 					<img src={companyLogo} alt="company logo" />
 				</div>
 				<div className={styles.redirectContainer}>
-					<Link to="/" className={styles.redirectLink}>
+					<Link to="/login" className={styles.redirectLink}>
 						Log In
 					</Link>
 					<Link
