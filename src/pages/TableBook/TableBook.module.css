@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+.container {
+    background-color: #e6e6e6;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.header {
+    margin-top: 90px;
+    text-align: center; 
+    font-family: 'Sofia Sans';
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 450px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.inputContainer,
+.dropdownContainer {
+    width: calc(48% - 10px);
+    margin-bottom: 20px;
+}
+
+.label {
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+
+.required {
+    color: red;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+}
+
+.dropdown {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+}
+
+.button {
+    background-color: #e1b767;
+    color: #000;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 1500px;
+}
+
+.button:hover {
+    background-color: #c99e44;
+}
+
+
+.inputDateBox {
+    width: 96%;
+    padding: 10px 3px 10px 20px; /* Add padding to the left side */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+    margin-top: 5px;
+}
