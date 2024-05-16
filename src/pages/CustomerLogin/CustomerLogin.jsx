@@ -4,17 +4,20 @@ import { Link } from "react-router-dom";
 import styles from "./CustomerLogin.module.css";
 import companyLogo from "../../assets/companyLogo.svg";
 import Navbar from "../../components/Navbar/Navbar";
+import BackgroundOverlay from '../../assets/backgroundOverlay.png';
 
 const CustomerLogin = () => {
 	return (
 		<>
+			<Navbar />
 			<div className={styles.container}>
+			<img src={BackgroundOverlay} alt="Background Overlay" className={styles.backgroundOverlay} />
 				<div className={styles.logoContainer}>
 					<img src={companyLogo} alt="company logo" />
 				</div>
 				<div className={styles.redirectContainer}>
 					<Link
-						to="/"
+						to="/login"
 						className={`${styles.redirectLink} ${styles.highlight}`}
 					>
 						Log In
