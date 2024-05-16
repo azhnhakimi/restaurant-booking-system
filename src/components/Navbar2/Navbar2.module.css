@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Suravaram&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	background-color: #fff;
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #959595;
+	box-shadow: 0px 2px 5px 0px rgba(149, 149, 149, 0.75);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.leftSide {
+	/* background-color: red; */
+	height: 100%;
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 50px;
+}
+
+.rightSide {
+	/* background-color: pink; */
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo {
+	scale: 0.5;
+}
+
+.listContainer {
+	height: 100%;
+	width: 100%;
+	/* background-color: lightblue; */
+	text-decoration: none;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 50px;
+}
+
+.linkContainer {
+	background-color: #fff;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+	transition: 0.3s;
+}
+
+.linkContainer:hover {
+	background-color: #000;
+}
+
+.linkContainer:hover .redirectLink {
+	color: #fff;
+}
+
+.redirectLink {
+	text-decoration: none;
+	font-family: "Suravaram";
+	font-size: 1.5rem;
+	color: #000;
+	transition: 0.3s;
+}
