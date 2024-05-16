@@ -6,6 +6,7 @@
 }
 
 .container {
+	margin-top: 70px;
 	width: 100%;
 	min-height: 100vh;
 	background-color: #e6e6e6;
@@ -106,3 +107,11 @@ span {
 	background-color: #000;
 	color: #e1b767;
 }
+
+.backgroundOverlay {
+	position: absolute;
+	top: calc(-70px); /* Subtract the margin-top value */
+	margin-top: 55px;
+	left: 780px;
+	height: 125%;
+  }
