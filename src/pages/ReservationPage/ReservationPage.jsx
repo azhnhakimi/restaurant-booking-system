@@ -1,79 +1,22 @@
-import styles from "./ReservationPage.module.css";
-import Navbar from "../../components/Navbar/Navbar";
+import React from 'react';
+import styles from './ReservationPage.module.css';
+import Navbar2 from '../../components/Navbar2/Navbar2';
+import CardComponent from '../../components/custCard/custCard'; // Adjust the import path as necessary
+import BackgroundOverlay from '../../assets/backgroundOverlay.png';
 
 const ReservationPage = () => {
-	return (
-		<>
-			<div className={styles.container}>
-				<Navbar />
-				<h1>Book a Table</h1>
-				<form className={styles.formContainer}>
-					<div className={styles.outerColumnWrapper}>
-						<div className={styles.columnContainer}>
-							<div className={styles.inputContainer}>
-								<label>
-									Name<span> *</span>
-								</label>
-								<input
-									type="text"
-									className={styles.textInput}
-								/>
-							</div>
-							<div className={styles.inputContainer}>
-								<label>
-									Contact Number<span> *</span>
-								</label>
-								<input
-									type="text"
-									className={styles.textInput}
-								/>
-							</div>
-							<div className={styles.inputContainer}>
-								<label>
-									Email<span> *</span>
-								</label>
-								<input
-									type="text"
-									className={styles.textInput}
-								/>
-							</div>
-						</div>
-						<div className={styles.columnContainer}>
-							<div className={styles.inputContainer}>
-								<label>
-									Name<span> *</span>
-								</label>
-								<input
-									type="text"
-									className={styles.textInput}
-								/>
-							</div>
-							<div className={styles.inputContainer}>
-								<label>
-									Contact Number<span> *</span>
-								</label>
-								<input
-									type="text"
-									className={styles.textInput}
-								/>
-							</div>
-							<div className={styles.inputContainer}>
-								<label>
-									Email<span> *</span>
-								</label>
-								<input
-									type="text"
-									className={styles.textInput}
-								/>
-							</div>
-						</div>
-					</div>
-
-					<button className={styles.reserveBtn}>book now</button>
-				</form>
-			</div>
-		</>
-	);
+    return (
+        <>
+            <Navbar2 />
+            <div className={styles.container}>
+                <h1 className={styles.header}>MY RESERVATION</h1>
+                <img src={BackgroundOverlay} alt="Background Overlay" className={styles.backgroundOverlay} />
+                <div className={styles.cardContainer}>
+                    <CardComponent />
+                </div>
+            </div>
+        </>
+    );
 };
 
 export default ReservationPage;
