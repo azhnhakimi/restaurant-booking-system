@@ -1,88 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
 * {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-	width: 100%;
-	min-height: 100vh;
-	background-color: #e6e6e6;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1 {
-	font-family: "Sofia Sans";
-	text-transform: uppercase;
-	margin-bottom: 0.6rem;
-	margin-top: 4.5rem;
+.header {
+    top: 120px;
+    position: fixed;
+    text-align: center;
+    font-family: 'Sofia Sans';
+    font-weight: bold;
+    color: #000;
+    width: 100%;
 }
 
-.formContainer {
-	background-color: #fff;
-	width: 60%;
-	height: 450px;
-	border: 2px solid #d9d9d9;
-	border-radius: 3rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	padding: 1.2em 2.3em;
+.backgroundOverlay {
+    position: absolute;
+    margin-top: 80px;
+    left: 840px;
+    z-index: 1;
+    height: 112%;
 }
 
-.outerColumnWrapper {
-	/* background-color: green; */
-	width: 100%;
-	height: 80%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.columnContainer {
-	/* background-color: yellow; */
-	width: 40%;
-	height: 100%;
-	padding: 0.5em;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.inputContainer {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-
-.textInput {
-	border: none;
-	border-radius: 0;
-	border-bottom: 2px solid #000;
-	width: 350px;
-}
-
-.reserveBtn {
-	width: 90%;
-	height: 45px;
-	border: none;
-	background-color: #e1b767;
-	border-radius: 0.7rem;
-	font-family: "Sofia Sans";
-	font-weight: bold;
-	font-size: 1.5rem;
-	text-transform: uppercase;
-	transition: 0.3s;
-}
-
-.reserveBtn:hover {
-	cursor: pointer;
-	background-color: #000;
-	color: #e1b767;
+.cardContainer {
+    margin-top: 200px; /* Ensure it appears below the fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Ensure it is above the background image */
 }
