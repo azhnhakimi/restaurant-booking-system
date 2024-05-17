@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+
+.card {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 18px;
+    padding: 18px;
+    width: 200px; /* Adjusted width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+}
+
+.card img {
+    width: 100px; /* Adjusted width */
+    height: 80px; /* Adjusted height */
+}
+
+.info {
+    margin: 20px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+.removeButton {
+    background-color: #FC6161;
+    color: #000; /* Change text color to black */
+    border: none;
+    border-radius: 10px;
+    padding: 8px 6px; /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 0px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.removeButton img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.removeButton span {
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+}
+
+.removeButton:hover {
+    background-color: #c94848; /* Darker red color on hover */
+}
