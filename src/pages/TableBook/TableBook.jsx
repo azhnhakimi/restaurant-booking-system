@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import Navbar2 from "../../components/Navbar2/Navbar2";
+import Navbar from "../../components/Navbar/Navbar";
+import Navbar2 from '../../components/Navbar2/Navbar2';
 import styles from "./TableBook.module.css";
+import { useAuth } from '../../AuthContext';
 
 const TableBook = () => {
+    const { isAuthenticated } = useAuth();
     const [reservationTime, setReservationTime] = useState(""); // State to track the selected reservation time
     const [reservationDate, setReservationDate] = useState(""); // State to track the selected reservation date
     const [numberOfPax, setNumberOfPax] = useState(""); // State to track the selected number of pax
@@ -21,7 +24,7 @@ const TableBook = () => {
 
     return (
         <div>
-            <Navbar2 />
+            {isAuthenticated ? <Navbar2 /> : <Navbar />}
             <div className={styles.container}>
                 <h1 className={styles.header}>BOOK A TABLE</h1>
                 <div className={styles.content}>
