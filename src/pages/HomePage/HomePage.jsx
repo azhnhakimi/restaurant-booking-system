@@ -1,12 +1,15 @@
 import React from 'react';
 import Navbar from "../../components/Navbar/Navbar";
+import Navbar2 from '../../components/Navbar2/Navbar2';
+import { useAuth } from '../../AuthContext';
 import styles from "./HomePage.module.css";
 import HomeImage from '../../assets/Home.png';
 
 const HomePage = () => {
+  const { isAuthenticated } = useAuth();
     return (
         <div>
-          <Navbar />
+          {isAuthenticated ? <Navbar2 /> : <Navbar />}
           <div className={styles.container}>
             <img src={HomeImage} alt="Home" className={styles.homeImage} />
             <div className={styles.textContainer}>
