@@ -1,42 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #e6e6e6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #e6e6e6;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .header {
-    top: 120px;
-    position: fixed;
-    text-align: center;
-    font-family: 'Sofia Sans';
-    font-weight: bold;
-    color: #000;
-    width: 100%;
+	top: 120px;
+	position: fixed;
+	text-align: center;
+	font-family: "Sofia Sans";
+	font-weight: bold;
+	color: #000;
+	width: 100%;
 }
 
 .backgroundOverlay {
-    position: absolute;
-    margin-top: 80px;
-    left: 840px;
-    z-index: 1;
-    height: 112%;
+	position: absolute;
+	margin-top: 80px;
+	left: 840px;
+	z-index: 1;
+	height: 112%;
 }
 
 .cardContainer {
-    margin-top: 200px; /* Ensure it appears below the fixed header */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2; /* Ensure it is above the background image */
+	margin-top: 200px; /* Ensure it appears below the fixed header */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2; /* Ensure it is above the background image */
+	gap: 50px;
 }
