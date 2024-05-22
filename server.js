@@ -34,28 +34,30 @@ app.post("/api/registerCustomer", async (req, res) => {
 });
 
 app.post("/api/loginCustomer", async (req, res) => {
-	const { usernameOrEmail, password } = req.body;
-	try {
-		const isValidUser = await dbOperation.checkCredentials(
-			usernameOrEmail,
-			password
-		);
-		if (isValidUser) {
-			const customerID = await dbOperation.getCustomerID(
-				usernameOrEmail,
-				password
-			);
-			res.cookie("customerID", customerID);
-			res.status(200).send("Login successful!");
-		} else {
-			res.status(401).send("Invalid credentials!");
-			console.log("Login failed!");
-		}
-	} catch (error) {
-		console.log(error);
-		res.status(500).send("Error logging in!");
-	}
+    const { usernameOrEmail, password } = req.body;
+    try {
+        const isValidUser = await dbOperation.checkCredentials(
+            usernameOrEmail,
+            password
+        );
+        if (isValidUser) {
+            const customerID = await dbOperation.getCustomerID(
+                usernameOrEmail,
+                password
+            );
+            res.cookie("customerID", customerID);
+            await dbOperation.logLoginActivity(customerID);
+            res.status(200).send("Login successful!");
+        } else {
+            res.status(401).send("Invalid credentials!");
+            console.log("Login failed!");
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("Error logging in!");
+    }
 });
+
 
 app.post("/api/createReservation", async (req, res) => {
 	const formData = req.body;
