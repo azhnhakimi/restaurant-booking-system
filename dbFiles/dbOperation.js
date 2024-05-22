@@ -1,6 +1,18 @@
 const sql = require("mssql");
 const config = require("./dbConfig");
 
+const logLoginActivity = async (customerID) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request().query(
+            `INSERT INTO LoginAuditTrail (CustomerID, LoginTime) VALUES (${customerID}, GETDATE())`
+        );
+        return result;
+    } catch (e) {
+        console.log(e);
+    }
+};
+
 const createCustomer = async (Customer) => {
 	try {
 		let pool = await sql.connect(config);
@@ -98,6 +110,7 @@ const checkCredentials = async (usernameOrEmail, password) => {
 };
 
 module.exports = {
+	logLoginActivity,
 	createCustomer,
 	checkCredentials,
 	getCustomerID,
